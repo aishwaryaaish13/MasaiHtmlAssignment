@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Simple 3x3 Color Grid</title>
+		<style>
+			:root{
+				--gap: 18px;
+			}
+			html,body{height:100%;}
+			body{
+				margin:0;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+				display:flex;
+				align-items:center;
+				justify-content:center;
+				background:#ffffff;
+				padding:28px;
+			}
+
+			.grid-wrap{
+				width:960px;
+				max-width:96vw;
+			}
+
+			.grid{
+				display:grid;
+				grid-template-columns:repeat(3,1fr);
+				gap:var(--gap);
+			}
+
+			.cell{
+				aspect-ratio: 16/9;
+				display:flex;
+				align-items:center;
+				justify-content:center;
+				color:#fff;
+				font-size:48px;
+				font-weight:600;
+				border-radius:2px;
+			}
+
+			
+			.c2{background:#f04b26;} 
+			.c3{background:#3c66e6;} 
+			.c4{background:#ffd400;} 
+			.c5{background:#7b3edc;} 
+			.c6{background:#2cc04a;} 
+			.c1{background:#1fc9ff;} 
+			.c7{background:#ff916e;} 
+			.c8{background:#1fa7a0;} 
+			.c9{background:#6e0000;} 
+
+			@media (max-width:520px){
+				.cell{font-size:28px}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid-wrap">
+			<div class="grid">
+				<div class="cell c2">2.</div>
+				<div class="cell c3">3.</div>
+				<div class="cell c4">4.</div>
+
+				<div class="cell c5">5.</div>
+				<div class="cell c6">6.</div>
+				<div class="cell c1">1.</div>
+
+				<div class="cell c7">7.</div>
+				<div class="cell c8">8.</div>
+				<div class="cell c9">9.</div>
+			</div>
+		</div>
+	</body>
+</html>
+
